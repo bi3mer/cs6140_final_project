@@ -12,7 +12,7 @@ Run `python build_w2v_model.py`. This creates the `mdl` directory and `word2vec.
 
 ## Results
 
-- [notebooks/build_models.ipynb](notebooks/build_models.ipynb) trains models and shows error rates.
-- [notebooks/analysis.ipynb](notebooks/analysis.ipynb) contains results from analysis like word clouds, most viewed channels, and more.
-- [notebooks/model_analysis.ipynb](notebooks/model_analysis.ipynb) runs an analysis on the best performing model with techniques like LIME and more. 
+- [build_models.ipynb](build_models.ipynb) trains models and shows error rates.
+- [analysis.ipynb](analysis.ipynb) contains results from analysis like word clouds, most viewed channels, and more.
+- [model_analysis.ipynb](model_analysis.ipynb) runs an analysis on the best performing model with techniques like LIME and more. 
 

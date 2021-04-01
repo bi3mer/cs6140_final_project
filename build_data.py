@@ -6,6 +6,7 @@ import keras
 from PIL import Image
 import pandas as pd
 import numpy as np
+import matplotlib as plt
 import glob
 import cv2
 import os
@@ -64,24 +65,28 @@ class CNNAutoEncoder():
         return keras.Model(input_img, decoded)
     
     def train_model(self, x_train, y_train, epochs=30, batch_size=32):
-        early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss',
-                                       min_delta=0,
-                                       patience=5,
-                                       verbose=1, 
-                                       mode='auto')
+        early_stopping = tf.keras.callbacks.EarlyStopping(
+            monitor='val_loss',
+            min_delta=0,
+            patience=5,
+            verbose=1, 
+            mode='auto')
 
-        history = self.autoencoder_model.fit(x_train, y_train,
-                                             batch_size=batch_size,
-                                             epochs=epochs,
-                                             validation_split=0.2,
-                                             callbacks=[early_stopping])
+        history = self.autoencoder_model.fit(
+            x_train, 
+            y_train,
+            batch_size=batch_size,
+            epochs=epochs,
+            validation_split=0.2,
+            callbacks=[early_stopping])
+            
         plt.plot(history.history['loss'])
         plt.plot(history.history['val_loss'])
         plt.title('Model loss')
         plt.ylabel('Loss')
         plt.xlabel('Epoch')
         plt.legend(['Train', 'Test'], loc='upper left')
-        plt.show()
+        plt.savefig(os.path.join('plots', 'cnn.png'))
     
     def evaluate(self, x_test):
         pred = self.autoencoder_model.predict(x_test)

@@ -6,6 +6,13 @@ YouTUbe data can be downloaded [here](https://www.kaggle.com/datasnaek/youtube-n
 
 To build `vids.csv` you can either run `python build_data.py` or download it [here](https://www.kaggle.com/kamalhaddad/vidswithencoding/download). Make sure that you take the CSV and put it into this project's directory.
 
-## Word2Vec
+## Word2Vec Model
 
 Run `python build_w2v_model.py`. This creates the `mdl` directory and `word2vec.model` which we will use to encode strings as input.
+
+## Results
+
+- [notebooks/build_models.ipynb](notebooks/build_models.ipynb) trains models and shows error rates.
+- [notebooks/analysis.ipynb](notebooks/analysis.ipynb) contains results from analysis like word clouds, most viewed channels, and more.
+- [notebooks/model_analysis.ipynb](notebooks/model_analysis.ipynb) runs an analysis on the best performing model with techniques like LIME and more. 
+

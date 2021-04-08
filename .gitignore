@@ -130,5 +130,5 @@ dmypy.json
 
 
 vids.csv
-mdl/*
-data/*
+# mdl/*
+# data/*

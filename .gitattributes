@@ -1,0 +1,6 @@
+data/test_x_all.csv filter=lfs diff=lfs merge=lfs -text
+data/test_x_sep.csv filter=lfs diff=lfs merge=lfs -text
+data/test_y.csv filter=lfs diff=lfs merge=lfs -text
+data/train_x_all.csv filter=lfs diff=lfs merge=lfs -text
+data/train_x_sep.csv filter=lfs diff=lfs merge=lfs -text
+data/train_y.csv filter=lfs diff=lfs merge=lfs -text
